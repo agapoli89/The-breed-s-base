@@ -13,87 +13,82 @@
 }
 
 body {
-    background-color: var(--main-background-color);
+    background-image: url(images/gray-background.png);
     color: var(--main-font-color);
     font-family: 'Lato', sans-serif;
-    font-size: 1.2em;
-}
-
-.container {
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+    overflow: auto;
 }
 
 .header__title {
-    font-size: 2em;
-    padding-top: 1em;
-    padding-bottom: .5em;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 15px;
     text-align: center;
 }
 
 .header__text {
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 20px;
+    margin-left: 20px;
     text-align: center;
 }
 
-.search {
-    margin: 2em;
+.section__select {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 30px;
 }
 
-.search__input {
+.select {
     width: 80vw;
-    height: 2em;
     border-radius: 5px;
-    margin-bottom: 1em;
     border: none;
-}
-
-.search__btn {
-    width: 50vw;
     background-color: var(--buttons-color);
     color: var(--main-font-color);
-    height: 2em;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2em;
+    font-size: 20px;
+    padding: 5px;
     font-weight: bold;
 }
 
-.image {
+.section__image {
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-}
-
-picture {
+    padding-top: 50px;
+    padding-bottom: 50px;
     position: relative;
     transform: rotate(3deg);
+    max-width: 80%;
 }
 
-img {
-    border: .7em solid var(--main-font-color);
-    border-bottom: 2em solid var(--main-font-color);
-    box-shadow: .5em .5em .5em rgb(99, 97, 97);
+.image {
+    border: 10px solid var(--main-font-color);
+    border-bottom: 30px solid var(--main-font-color);
+    box-shadow: 5px 5px 5px rgb(99, 97, 97);
+    width: 100%;
+    height: auto;
 }
 
-picture p {
+.section__image p {
     position: absolute;
     color: var(--buttons-color);
     bottom: 0;
     text-align: center;
     width: 100%;
-    padding: .8em;
+    padding-bottom: 55px;
     font: 400 18px/1 'Kaushan Script', cursive;
 }
 
+.drawing-pin {
+    background-image: url("images/drawing-pin.-small.png");
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 55px;
+    left: 20px;
+}
 
 .footer {
     position: fixed;
@@ -105,54 +100,62 @@ picture p {
 }
 
 @media (min-width: 586px) {
-    .container {
-        width: 90vw;
+    .header,
+    .select {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70vw;
     }
 
-    .search__input {
-        width: 80vw;
-        height: 3em;
+    .header__text {
+        font-size: 20px;
     }
 
-    .search__btn {
-        width: 30vw;
+    .section__image{
+        max-width: 70%;
+    }
+
+    .drawing-pin {
+        background-image: url("images/drawing-pin.png");
+        width: 50px;
+        height: 50px;
     }
 }
 
+
 @media (min-width: 900px) {
-    .search {
-        flex-direction: row;
-        gap: 1em;
-        margin-bottom: 5em;
-    }
-    .search__input {
-        width: 80vw;
-        height: 3em;
-        border-radius: 5px;
-        margin-bottom: 0;
-    }
-    
-    .search__btn {
-        background-color: var(--buttons-color);
-        color: var(--main-font-color);
-        height: 2em;
-        border-radius: 5px;
+
+    body {
         font-size: 1.2em;
     }
 
-    img {
-        border: 1em solid var(--main-font-color);
-        border-bottom: 3em solid var(--main-font-color);
+    .header__title {
+        font-size: 50px;
     }
 
-    picture p {
-        font-size: 1.5em;
-        padding: .7em;
+    .header__text {
+        font-size: 25px;
     }
-}
 
-@media (min-width: 1000px) {
-    .container {
-        width: 70vw;
+    .select {
+        width: 60vw;
+        font-size: 30px;
+        border-radius: 5px;
+        margin-bottom: 0;
     }
+
+    .image {
+        border: 15px solid var(--main-font-color);
+        border-bottom: 50px solid var(--main-font-color);
+    }
+
+    .section__image p {
+        font-size: 30px;
+        padding-bottom: 60px;
+    }
+
+    .section__image{
+        max-width: 60%;
+    }
+
 }

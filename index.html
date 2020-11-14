@@ -11,27 +11,25 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="header__title">THE BREED'S BASE</h1>
-            <p class="header__text hidden">Heve you ever wonder how some breed looks like? Here are all the most popular
-                breeds in one place. The main page is reserved for my lovely mixed dog. Enjoy!</p>
-        </header>
+    <header class="header">
+        <h1 class="header__title">THE BREED'S BASE</h1>
+        <p class="header__text hidden">Heve you ever wonder how some breed looks like? Here are all the most popular
+            breeds in one place. The main page is reserved for my lovely mixed dog. Enjoy!</p>
+    </header>
 
-        <article>
-            <section class="search">
-                <input type="text" class="search__input">
-                <button class="search__btn">Check!</button>
-            </section>
-            <section class="image">
-                <picture>
-                    <source media="(max-width: 900px)" srcset="images/foks.jpg">
-                    <img src="images/foks-big.jpg" style="width:auto" alt="my mixed dog">
-                    <p>Foks, Oct '19</p>
-                </picture>
-            </section>
-        </article>
-    </div>
+    <article>
+        <section class="section__select">
+            <select name="breeds" id="" class="select">
+                <option value="">Select breed</option>
+            </select>
+        </section>
+        <picture class="section__image">
+            <source media="(max-width: 900px)" srcset="images/foks.jpg">
+            <img src="images/foks-big.jpg" alt="my mixed dog" class="image">
+            <div class="drawing-pin"></div>
+            <p>Foks, Oct '19</p>
+        </picture>
+    </article>
     <footer class="footer">Copyright 2020 &copy; All rights reserved.</footer>
 
 
